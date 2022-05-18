@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\hooks\hook_base.cpp" />
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\game_memory_manager.cpp" />
+    <ClCompile Include="src\hooks\iat_hook.cpp" />
+    <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\ssl_manager.cpp" />
+    <ClCompile Include="src\util.cpp" />
+    <ClCompile Include="src\hooks\veh_hook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\detours\equ8_detour.h" />
+    <ClInclude Include="include\detours\get_proc_address_detour.h" />
+    <ClInclude Include="include\hooks\hook_base.h" />
+    <ClInclude Include="include\detours\discord_rpc_detour.h" />
+    <ClInclude Include="include\framework.h" />
+    <ClInclude Include="include\game_memory_manager.h" />
+    <ClInclude Include="include\hooks\iat_hook.h" />
+    <ClInclude Include="include\patterns.h" />
+    <ClInclude Include="include\pch.h" />
+    <ClInclude Include="include\ssl_manager.h" />
+    <ClInclude Include="include\uetypes.h" />
+    <ClInclude Include="include\util.h" />
+    <ClInclude Include="include\hooks\veh_hook.h" />
+    <ClInclude Include="libs\discord-rpc\include\discord_register.h" />
+    <ClInclude Include="libs\discord-rpc\include\discord_rpc.h" />
+    <ClInclude Include="libs\libcurl\curl.h" />
+    <ClInclude Include="libs\libcurl\curlver.h" />
+    <ClInclude Include="libs\libcurl\system.h" />
+    <ClInclude Include="libs\libwebsockets\include\libwebsockets.h" />
+    <ClInclude Include="libs\libwebsockets\include\lws_config.h" />
+    <ClInclude Include="libs\openssl\aes.h" />
+    <ClInclude Include="libs\openssl\asn1.h" />
+    <ClInclude Include="libs\openssl\asn1err.h" />
+    <ClInclude Include="libs\openssl\asn1t.h" />
+    <ClInclude Include="libs\openssl\asn1_mac.h" />
+    <ClInclude Include="libs\openssl\async.h" />
+    <ClInclude Include="libs\openssl\asyncerr.h" />
+    <ClInclude Include="libs\openssl\bio.h" />
+    <ClInclude Include="libs\openssl\bioerr.h" />
+    <ClInclude Include="libs\openssl\blowfish.h" />
+    <ClInclude Include="libs\openssl\bn.h" />
+    <ClInclude Include="libs\openssl\bnerr.h" />
+    <ClInclude Include="libs\openssl\buffer.h" />
+    <ClInclude Include="libs\openssl\buffererr.h" />
+    <ClInclude Include="libs\openssl\camellia.h" />
+    <ClInclude Include="libs\openssl\cast.h" />
+    <ClInclude Include="libs\openssl\cmac.h" />
+    <ClInclude Include="libs\openssl\cms.h" />
+    <ClInclude Include="libs\openssl\cmserr.h" />
+    <ClInclude Include="libs\openssl\comp.h" />
+    <ClInclude Include="libs\openssl\comperr.h" />
+    <ClInclude Include="libs\openssl\conf.h" />
+    <ClInclude Include="libs\openssl\conferr.h" />
+    <ClInclude Include="libs\openssl\conf_api.h" />
+    <ClInclude Include="libs\openssl\crypto.h" />
+    <ClInclude Include="libs\openssl\cryptoerr.h" />
+    <ClInclude Include="libs\openssl\ct.h" />
+    <ClInclude Include="libs\openssl\cterr.h" />
+    <ClInclude Include="libs\openssl\des.h" />
+    <ClInclude Include="libs\openssl\dh.h" />
+    <ClInclude Include="libs\openssl\dherr.h" />
+    <ClInclude Include="libs\openssl\dsa.h" />
+    <ClInclude Include="libs\openssl\dsaerr.h" />
+    <ClInclude Include="libs\openssl\dtls1.h" />
+    <ClInclude Include="libs\openssl\ebcdic.h" />
+    <ClInclude Include="libs\openssl\ec.h" />
+    <ClInclude Include="libs\openssl\ecdh.h" />
+    <ClInclude Include="libs\openssl\ecdsa.h" />
+    <ClInclude Include="libs\openssl\ecerr.h" />
+    <ClInclude Include="libs\openssl\engine.h" />
+    <ClInclude Include="libs\openssl\engineerr.h" />
+    <ClInclude Include="libs\openssl\err.h" />
+    <ClInclude Include="libs\openssl\evp.h" />
+    <ClInclude Include="libs\openssl\evperr.h" />
+    <ClInclude Include="libs\openssl\e_os2.h" />
+    <ClInclude Include="libs\openssl\hmac.h" />
+    <ClInclude Include="libs\openssl\idea.h" />
+    <ClInclude Include="libs\openssl\kdf.h" />
+    <ClInclude Include="libs\openssl\kdferr.h" />
+    <ClInclude Include="libs\openssl\lhash.h" />
+    <ClInclude Include="libs\openssl\md2.h" />
+    <ClInclude Include="libs\openssl\md4.h" />
+    <ClInclude Include="libs\openssl\md5.h" />
+    <ClInclude Include="libs\openssl\mdc2.h" />
+    <ClInclude Include="libs\openssl\modes.h" />
+    <ClInclude Include="libs\openssl\objects.h" />
+    <ClInclude Include="libs\openssl\objectserr.h" />
+    <ClInclude Include="libs\openssl\obj_mac.h" />
+    <ClInclude Include="libs\openssl\ocsp.h" />
+    <ClInclude Include="libs\openssl\ocsperr.h" />
+    <ClInclude Include="libs\openssl\opensslconf.h" />
+    <ClInclude Include="libs\openssl\opensslv.h" />
+    <ClInclude Include="libs\openssl\ossl_typ.h" />
+    <ClInclude Include="libs\openssl\pem.h" />
+    <ClInclude Include="libs\openssl\pem2.h" />
+    <ClInclude Include="libs\openssl\pemerr.h" />
+    <ClInclude Include="libs\openssl\pkcs12.h" />
+    <ClInclude Include="libs\openssl\pkcs12err.h" />
+    <ClInclude Include="libs\openssl\pkcs7.h" />
+    <ClInclude Include="libs\openssl\pkcs7err.h" />
+    <ClInclude Include="libs\openssl\rand.h" />
+    <ClInclude Include="libs\openssl\randerr.h" />
+    <ClInclude Include="libs\openssl\rand_drbg.h" />
+    <ClInclude Include="libs\openssl\rc2.h" />
+    <ClInclude Include="libs\openssl\rc4.h" />
+    <ClInclude Include="libs\openssl\rc5.h" />
+    <ClInclude Include="libs\openssl\ripemd.h" />
+    <ClInclude Include="libs\openssl\rsa.h" />
+    <ClInclude Include="libs\openssl\rsaerr.h" />
+    <ClInclude Include="libs\openssl\safestack.h" />
+    <ClInclude Include="libs\openssl\seed.h" />
+    <ClInclude Include="libs\openssl\sha.h" />
+    <ClInclude Include="libs\openssl\srp.h" />
+    <ClInclude Include="libs\openssl\srtp.h" />
+    <ClInclude Include="libs\openssl\ssl.h" />
+    <ClInclude Include="libs\openssl\ssl2.h" />
+    <ClInclude Include="libs\openssl\ssl3.h" />
+    <ClInclude Include="libs\openssl\sslerr.h" />
+    <ClInclude Include="libs\openssl\stack.h" />
+    <ClInclude Include="libs\openssl\store.h" />
+    <ClInclude Include="libs\openssl\storeerr.h" />
+    <ClInclude Include="libs\openssl\symhacks.h" />
+    <ClInclude Include="libs\openssl\tls1.h" />
+    <ClInclude Include="libs\openssl\ts.h" />
+    <ClInclude Include="libs\openssl\tserr.h" />
+    <ClInclude Include="libs\openssl\txt_db.h" />
+    <ClInclude Include="libs\openssl\ui.h" />
+    <ClInclude Include="libs\openssl\uierr.h" />
+    <ClInclude Include="libs\openssl\whrlpool.h" />
+    <ClInclude Include="libs\openssl\x509.h" />
+    <ClInclude Include="libs\openssl\x509err.h" />
+    <ClInclude Include="libs\openssl\x509v3.h" />
+    <ClInclude Include="libs\openssl\x509v3err.h" />
+    <ClInclude Include="libs\openssl\x509_vfy.h" />
+    <ClInclude Include="libs\openssl\__DECC_INCLUDE_EPILOGUE.H" />
+    <ClInclude Include="libs\openssl\__DECC_INCLUDE_PROLOGUE.H" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Ostium.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{4f28a2a3-145a-4e61-a3de-761ca57b4141}</ProjectGuid>
+    <RootNamespace>Ostium</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Configuration)\$(PlatformTarget)\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;OSTIUM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;OSTIUM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;OSTIUM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;OSTIUM_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
